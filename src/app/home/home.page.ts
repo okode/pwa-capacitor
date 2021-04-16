@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActionSheet, ActionSheetButtonStyle } from '@capacitor/action-sheet';
 import { ActionSheetController } from '@ionic/angular';
 
 @Component({
@@ -10,7 +11,7 @@ export class HomePage {
 
   constructor(private actionSheetController: ActionSheetController) {}
 
-  async onClick() {
+  async actionSheetHybrid() {
     const actionSheet = await this.actionSheetController.create({
       header: 'Albums',
       buttons: [{
@@ -37,6 +38,27 @@ export class HomePage {
     });
 
     await actionSheet.present();
+  }
+
+  async actionSheetNative() {
+    const result = await ActionSheet.showActions({
+      title: 'Photo Options',
+      message: 'Select an option to perform',
+      options: [
+        {
+          title: 'Upload',
+        },
+        {
+          title: 'Share',
+        },
+        {
+          title: 'Remove',
+          style: ActionSheetButtonStyle.Destructive,
+        },
+      ],
+    });
+
+    console.log('Action Sheet result:', result);
   }
 
 }
