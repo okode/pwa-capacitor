@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ActionSheet, ActionSheetButtonStyle } from '@capacitor/action-sheet';
+import { ActionSheet, ActionSheetButton, ActionSheetButtonStyle } from '@capacitor/action-sheet';
+import { Dialog } from '@capacitor/dialog';
 import { ActionSheetController } from '@ionic/angular';
 
 @Component({
@@ -40,25 +41,22 @@ export class HomePage {
     await actionSheet.present();
   }
 
-  async actionSheetNative() {
+  async showActionSheet() {
+    const options: ActionSheetButton[] = [
+      { title: 'Upload' },
+      { title: 'Share' },
+      { title: 'Remove', style: ActionSheetButtonStyle.Destructive }
+    ];
     const result = await ActionSheet.showActions({
       title: 'Photo Options',
       message: 'Select an option to perform',
-      options: [
-        {
-          title: 'Upload',
-        },
-        {
-          title: 'Share',
-        },
-        {
-          title: 'Remove',
-          style: ActionSheetButtonStyle.Destructive,
-        },
-      ],
+      options
     });
 
-    console.log('Action Sheet result:', result);
+    Dialog.alert({
+      title: 'Photo option selected',
+      message: options[result.index].title
+    });
   }
 
 }
