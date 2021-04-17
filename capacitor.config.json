@@ -1,6 +1,6 @@
 {
   "appId": "com.okode.pwacapacitor",
-  "appName": "pwacapacitor",
+  "appName": "PWA Capacitor",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
