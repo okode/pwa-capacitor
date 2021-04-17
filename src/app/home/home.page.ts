@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ActionSheet, ActionSheetButton, ActionSheetButtonStyle } from '@capacitor/action-sheet';
 import { Dialog } from '@capacitor/dialog';
-import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,37 +8,6 @@ import { ActionSheetController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor(private actionSheetController: ActionSheetController) {}
-
-  async actionSheetHybrid() {
-    const actionSheet = await this.actionSheetController.create({
-      header: 'Albums',
-      buttons: [{
-        text: 'Delete',
-        role: 'destructive',
-        icon: 'trash',
-        handler: () => {
-          console.log('Delete clicked');
-        }
-      }, {
-        text: 'Share',
-        icon: 'share',
-        handler: () => {
-          console.log('Share clicked');
-        }
-      }, {
-        text: 'Cancel',
-        icon: 'close',
-        role: 'cancel',
-        handler: () => {
-          console.log('Cancel clicked');
-        }
-      }]
-    });
-
-    await actionSheet.present();
-  }
 
   async showActionSheet() {
     const options: ActionSheetButton[] = [
