@@ -42,7 +42,7 @@ export class HomePage {
       message: options[result.index].title
     });
 
-    await alertPlugin.show({ title: 'Title from JS', message: 'Message from JS' });
+    alertPlugin.show({ title: 'Title from JS', message: 'Message from JS' });
   }
 
 }
