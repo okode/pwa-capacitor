@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">pwacapacitor</string>
+    <string name="app_name">PWA Capacitor</string>
     <string name="title_activity_main">PWA Capacitor</string>
     <string name="package_name">com.okode.pwacapacitor</string>
     <string name="custom_url_scheme">com.okode.pwacapacitor</string>
