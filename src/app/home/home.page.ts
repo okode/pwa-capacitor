@@ -7,7 +7,12 @@ interface TrackingPlugin {
   trackScreen(options: { screen: string }): Promise<void>;
 }
 
+interface AlertPlugin {
+  show(options: { title: string; message: string }): Promise<void>;
+}
+
 const trackingPlugin = registerPlugin<TrackingPlugin>('TrackingPlugin');
+const alertPlugin = registerPlugin<AlertPlugin>('AlertPlugin');
 
 @Component({
   selector: 'app-home',
@@ -32,10 +37,12 @@ export class HomePage {
       options
     });
 
-    Dialog.alert({
+    await Dialog.alert({
       title: 'Photo option selected',
       message: options[result.index].title
     });
+
+    await alertPlugin.show({ title: 'Title from JS', message: 'Message from JS' });
   }
 
 }

@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		2FAD9763203C412B000D30F8 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD9762203C412B000D30F8 /* config.xml */; };
 		3EECAD10262C09530026B4D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EECAD0F262C09530026B4D8 /* GoogleService-Info.plist */; };
-		3EECAD39262C103D0026B4D8 /* TrackingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EECAD38262C103D0026B4D8 /* TrackingPlugin.swift */; };
-		3EECAD3D262C12C30026B4D8 /* TrackingPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EECAD3C262C12C30026B4D8 /* TrackingPlugin.m */; };
+		3EECAD39262C103D0026B4D8 /* AppPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EECAD38262C103D0026B4D8 /* AppPlugin.swift */; };
+		3EECAD3D262C12C30026B4D8 /* AppPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EECAD3C262C12C30026B4D8 /* AppPlugin.m */; };
 		50379B232058CBB4000EE86E /* capacitor.config.json in Resources */ = {isa = PBXBuildFile; fileRef = 50379B222058CBB4000EE86E /* capacitor.config.json */; };
 		504EC3081FED79650016851F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504EC3071FED79650016851F /* AppDelegate.swift */; };
 		504EC30D1FED79650016851F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC30B1FED79650016851F /* Main.storyboard */; };
@@ -23,9 +23,9 @@
 /* Begin PBXFileReference section */
 		2FAD9762203C412B000D30F8 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
 		3EECAD0F262C09530026B4D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3EECAD38262C103D0026B4D8 /* TrackingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingPlugin.swift; sourceTree = "<group>"; };
+		3EECAD38262C103D0026B4D8 /* AppPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPlugin.swift; sourceTree = "<group>"; };
 		3EECAD3B262C12C20026B4D8 /* App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
-		3EECAD3C262C12C30026B4D8 /* TrackingPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackingPlugin.m; sourceTree = "<group>"; };
+		3EECAD3C262C12C30026B4D8 /* AppPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppPlugin.m; sourceTree = "<group>"; };
 		50379B222058CBB4000EE86E /* capacitor.config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = capacitor.config.json; sourceTree = "<group>"; };
 		504EC3041FED79650016851F /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		504EC3071FED79650016851F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 				504EC3131FED79650016851F /* Info.plist */,
 				2FAD9762203C412B000D30F8 /* config.xml */,
 				50B271D01FEDC1A000F3C39B /* public */,
-				3EECAD38262C103D0026B4D8 /* TrackingPlugin.swift */,
-				3EECAD3C262C12C30026B4D8 /* TrackingPlugin.m */,
+				3EECAD38262C103D0026B4D8 /* AppPlugin.swift */,
+				3EECAD3C262C12C30026B4D8 /* AppPlugin.m */,
 				3EECAD3B262C12C20026B4D8 /* App-Bridging-Header.h */,
 			);
 			path = App;
@@ -220,8 +220,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				504EC3081FED79650016851F /* AppDelegate.swift in Sources */,
-				3EECAD39262C103D0026B4D8 /* TrackingPlugin.swift in Sources */,
-				3EECAD3D262C12C30026B4D8 /* TrackingPlugin.m in Sources */,
+				3EECAD39262C103D0026B4D8 /* AppPlugin.swift in Sources */,
+				3EECAD3D262C12C30026B4D8 /* AppPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
