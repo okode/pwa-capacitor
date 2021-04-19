@@ -18,13 +18,5 @@
 	{
 		"pkg": "@capacitor/keyboard",
 		"classpath": "com.capacitorjs.plugins.keyboard.KeyboardPlugin"
-	},
-	{
-		"pkg": "TrackingPlugin",
-		"classpath": "com.okode.pwacapacitor.TrackingPlugin"
-	},
-	{
-		"pkg": "AlertPlugin",
-		"classpath": "com.okode.pwacapacitor.AlertPlugin"
 	}
 ]
